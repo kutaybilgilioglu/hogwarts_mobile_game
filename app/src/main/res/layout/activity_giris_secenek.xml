@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".girisSecenek">
+
+    <ToggleButton
+        android:id="@+id/button_player_count"
+        android:layout_width="232dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="199dp"
+        android:layout_marginBottom="82dp"
+        android:background="@color/teal_200"
+        android:text="ToggleButton"
+        android:textColor="@color/black"
+        android:textOff="Tek Oyunculu"
+        android:textOn="Çok Oyunculu"
+        app:layout_constraintBottom_toTopOf="@+id/chipGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="324dp"
+        android:layout_height="174dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="144dp"
+        app:singleSelection="true"
+        app:chipSpacingVertical="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_player_count">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_x2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:fontFamily="sans-serif"
+            android:text="2x2"
+            android:textAlignment="center"
+            app:checkedIcon="@android:color/holo_green_light" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_x4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="4x4"
+            android:textAlignment="center"
+            app:checkedIcon="@android:color/holo_green_light" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_x6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="6x6"
+            android:textAlignment="center"
+            app:checkedIcon="@android:color/holo_green_light" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <Button
+        android:id="@+id/button_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="95dp"
+        android:text="Başlat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroup" />
+
+    <Button
+        android:id="@+id/mainmenuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Girişe dön"
+        app:layout_constraintBottom_toTopOf="@+id/button_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
